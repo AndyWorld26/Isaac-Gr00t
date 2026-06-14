@@ -301,16 +301,13 @@ PYTHONPATH=$PYTHONPATH:./motionbricks python3 motionbricks/scripts/interactive_d
 
 1. Настройка окружения и привязка к источнику весов:
 ```
-# Добавляем удаленный репозиторий с весами под именем upstream
 git remote add upstream [https://github.com/NVlabs/GR00T-WholeBodyControl.git](https://github.com/NVlabs/GR00T-WholeBodyControl.git)
 git fetch upstream
 
-# Включаем поддержку Git LFS в текущем окружении
 git lfs install
-# Выкачиваем чекпоинты моделей
 git lfs pull upstream --include="motionbricks/out/**"
 
-# Проверка весов подсетей и клипов локомоции
+#Проверка размерности
 ls -lh motionbricks/out/G1-clip.ckpt                                     # ~7.5 MB
 ls -lh motionbricks/out/motionbricks_vqvae/version_1/checkpoints/*.ckpt  # ~273 MB
 ls -lh motionbricks/out/motionbricks_pose/version_1/checkpoints/*.ckpt   # ~1.6 GB
@@ -496,16 +493,13 @@ PYTHONPATH=$PYTHONPATH:./motionbricks python3 motionbricks/scripts/interactive_d
 
 1. Настройка окружения и привязка к источнику весов:
 ```
-# Добавляем удаленный репозиторий с весами под именем upstream
 git remote add upstream [https://github.com/NVlabs/GR00T-WholeBodyControl.git](https://github.com/NVlabs/GR00T-WholeBodyControl.git)
 git fetch upstream
 
-# Включаем поддержку Git LFS в текущем окружении
 git lfs install
-# Выкачиваем чекпоинты моделей
 git lfs pull upstream --include="motionbricks/out/**"
 
-# Проверка весов подсетей и клипов локомоции
+# Проверка размерности
 ls -lh motionbricks/out/G1-clip.ckpt                                     # ~7.5 MB
 ls -lh motionbricks/out/motionbricks_vqvae/version_1/checkpoints/*.ckpt  # ~273 MB
 ls -lh motionbricks/out/motionbricks_pose/version_1/checkpoints/*.ckpt   # ~1.6 GB
